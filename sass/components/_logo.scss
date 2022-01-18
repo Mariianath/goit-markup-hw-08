@@ -1,0 +1,25 @@
+.site-logo,
+.site-logo:hover,
+.site-logo:visited {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.header-section__site-logo {
+  margin-right: 93px;
+  color: #000000;
+}
+.site-logo__name-accent {
+  color: $accent-color;
+}
+
+///footer
+.footer__site-logo {
+  display: block;
+  margin-bottom: 20px;
+
+  color: $accent-text-color;
+}

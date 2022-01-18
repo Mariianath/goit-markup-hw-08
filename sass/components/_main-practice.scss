@@ -1,0 +1,36 @@
+.practice-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+.practice-container__box {
+  @extend %container;
+  flex-direction: column;
+}
+.practice-list {
+  display: flex;
+}
+
+.practice {
+  position: relative;
+}
+.practice__label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 82px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.practice__text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $accent-text-color;
+}

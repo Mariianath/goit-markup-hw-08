@@ -1,0 +1,55 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+
+  color: $primary-text-color;
+
+  appearance: none;
+}
+
+.checkbox__imput {
+  border: 0;
+  appearance: none;
+}
+
+.checkbox__box {
+  display: block;
+  margin-right: 9px;
+  width: 16px;
+  height: 15px;
+  background-color: $accent-text-color;
+  border: 2px solid $primary-text-color;
+  border-radius: 2px;
+  background-size: contain;
+  fill: $primary-text-color;
+  cursor: pointer;
+
+  @include transition(background-color);
+  @include transition(border);
+}
+
+.checkbox__imput:checked + .checkbox__box {
+  background-color: $accent-color;
+  border: 2px solid $accent-color;
+  background-image: url('../images/full-check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+
+  fill: $accent-text-color;
+}
+.checkbox__imput:focus + .checkbox__box {
+  border-color: $accent-color;
+}
+.checkbox__title {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.terms {
+  text-decoration: underline;
+  color: $accent-color;
+}

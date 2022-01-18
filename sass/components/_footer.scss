@@ -1,0 +1,97 @@
+.footer {
+  background-color: #2f303a;
+  color: $accent-text-color;
+  padding: 60px 0;
+}
+
+.footer__container {
+  @extend %container;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__adress-box-indent-right:not(:last-child) {
+  margin-right: 70px;
+}
+
+////afress-footer
+.adress {
+  font-size: 14px;
+  line-height: 1.7;
+  /* or 171% */
+  letter-spacing: 0.03em;
+  margin-bottom: 9px;
+}
+
+.contact-ithem:not(:last-child) {
+  margin-bottom: 9px;
+}
+.contact-footer {
+  font-size: 14px;
+  line-height: 1.71;
+  /* or 171% */
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  &:focus,
+  &:hover,
+  &:visited {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+////invitation-form
+.invitation {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+//networks
+.footer__network-link {
+  color: $accent-text-color;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+
+  @include transition(background-color);
+  @include transition(box-shadow);
+  @include transition(scale);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: scale(1.2);
+  }
+}
+.twitter-link {
+  background-color: $accent-color;
+}
+///mailing-form
+.mailing {
+  display: flex;
+}
+.mailing__form {
+  padding: 15px 16px 15px;
+  height: 50px;
+  width: 360px;
+  background-color: rgba(47, 48, 58, 1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: $accent-text-color;
+  cursor: pointer;
+
+  @include transition(box-shadow);
+
+  &:focus {
+    cursor: auto;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+  }
+}
