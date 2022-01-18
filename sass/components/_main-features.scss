@@ -9,10 +9,15 @@
   margin-right: -30px;
   @media screen and (min-width: 767px) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .feature-list__ithem {
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 767px) {
+    width: calc((100% - 2 * 30px) / 2);
     margin-right: 30px;
     display: flex;
     flex-direction: column;
@@ -22,9 +27,6 @@
   @media screen and (min-width: 1200px) {
     width: 270px;
   }
-}
-.section_ithem-indent-right:not(:last-child) {
-  margin-right: 30px;
 }
 
 .feature-list__title {

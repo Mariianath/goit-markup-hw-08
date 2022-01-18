@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   body {
     width: 100%;
   }
@@ -475,11 +475,22 @@ address {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .feature-list__ithem {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .feature-list__ithem {
+    width: -webkit-calc((100% - 2 * 30px) / 2);
+    width: calc((100% - 2 * 30px) / 2);
     margin-right: 30px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -501,10 +512,6 @@ address {
   .feature-list__ithem {
     width: 270px;
   }
-}
-
-.section_ithem-indent-right:not(:last-child) {
-  margin-right: 30px;
 }
 
 .feature-list__title {
@@ -584,11 +591,20 @@ address {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    margin-right: -30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .team {
+    margin-bottom: -30px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 }
 
 .team__ithem {
-  width: 100%;
   background-color: #fff;
   text-align: center;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -597,7 +613,13 @@ address {
           border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
+  .team__ithem {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .team__ithem {
     display: -webkit-box;
     display: -webkit-flex;
@@ -612,12 +634,21 @@ address {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .team__ithem {
-    width: 50%;
+    margin-right: 30px;
+    width: -webkit-calc((100% - 2 * 30px) / 2);
+    width: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__ithem {
+    width: 270px;
   }
 }
 
