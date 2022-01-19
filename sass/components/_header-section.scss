@@ -1,20 +1,30 @@
 .header-section {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ececec;
 }
+.mobile-menu {
+  background-color: aqua;
+}
+
 .navigation-bar {
   @extend %container;
 
   display: flex;
   align-items: center;
+
   margin-top: 0;
   padding-top: 0;
 }
+
 .navigation-box {
   display: flex;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 .navigation-box__ithem {
   position: relative;
@@ -24,6 +34,14 @@
   }
 }
 .navigation-box__link {
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.175;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: $primary-text-color1;
+  }
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -45,36 +63,41 @@
   }
 }
 ///activepage
-.active-page {
-  position: relative;
-  color: $accent-color;
-
-  &:hover,
-  &:visited {
+@media screen and (min-width: 768px) {
+  .active-page {
+    position: relative;
     color: $accent-color;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0%;
-    bottom: -1px;
 
-    width: 100%;
-    height: 4px;
+    &:hover,
+    &:visited {
+      color: $accent-color;
+    }
 
-    background-color: $accent-color;
-    color: $accent-color;
-    border-radius: 2px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0%;
+      bottom: -1px;
+
+      width: 100%;
+      height: 4px;
+
+      background-color: $accent-color;
+      color: $accent-color;
+      border-radius: 2px;
+    }
   }
 }
 ///contacts-header
 .conact-box {
-  display: flex;
   margin-left: auto;
-}
+  @media screen and (min-width: 1200px) {
+    display: flex;
 
-.conact-box__ithem-indent-right:not(:last-child) {
-  margin-right: 50px;
+    .conact-box__ithem-indent-right:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .conact-box__link {
@@ -93,5 +116,11 @@
   &:focus {
     color: $accent-color;
     fill: $accent-color;
+  }
+}
+
+.socials-box {
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
