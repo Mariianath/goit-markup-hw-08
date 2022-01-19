@@ -44,6 +44,10 @@
     height: 24px;
   }
   @extend %button;
+  @media screen and (max-width: 1199px) {
+    width: 200px;
+    align-self: center;
+  }
 }
 ///modal-form
 .modalform__button {
