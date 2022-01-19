@@ -1,0 +1,35 @@
+.mobile-menu {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 40px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    align-items: center;
+    .first {
+      order: 1;
+
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+
+      color: #2196f3;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 2;
+  }
+}
+.conact-box {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
