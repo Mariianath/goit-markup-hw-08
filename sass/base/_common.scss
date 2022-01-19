@@ -9,6 +9,8 @@ p {
 }
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 body {
   font-family: $primary-font, $secondary-font, sans-serif;
