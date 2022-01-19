@@ -1309,13 +1309,24 @@ address {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: -8px;
+  margin-bottom: -15px;
 }
 
-.works-navigation__button-indent-right:not(:last-child) {
+@media screen and (min-width: 1200px) {
+  .works-navigation {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.works-navigation__box {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .work-list {
@@ -1326,20 +1337,39 @@ address {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1199px) {
+  .work-list {
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-list {
+    margin-right: -30px;
+  }
+}
+
 .work-list-indent-up {
   margin-top: 34px;
 }
 
-.work-list__ithem {
-  width: 370px;
+@media screen and (max-width: 1199px) {
+  .work-list__ithem {
+    margin-bottom: 30px;
+  }
 }
 
-.work-list__ithem-position:not(:nth-last-child(3n + 1)) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .work-list__ithem {
+    margin-right: 30px;
+    width: calc((100% - 2 * 30px) / 2);
+  }
 }
 
-.work-list__ithem-position:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+  .work-list__ithem {
+    width: 370px;
+  }
 }
 
 .work-list__link {
