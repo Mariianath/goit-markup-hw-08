@@ -1,5 +1,4 @@
 .header-section {
-  position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom-width: 1px;
@@ -9,7 +8,12 @@
 .navigation-bar {
   @extend %container;
 
-  display: flex;
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
   margin-top: 0;
   padding-top: 0;
@@ -19,14 +23,21 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
     flex-grow: 2;
-    margin-bottom: auto;
+
+    margin-bottom: -30px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: -50px;
   }
 }
 .navigation-box__ithem {
   position: relative;
 
-  &:not(:last-child) {
+  @media screen and (min-width: 768px) {
     margin-right: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
   }
 }
 .navigation-box__link {
@@ -84,17 +95,24 @@
 .conact-box {
   display: flex;
   @media screen and (max-width: 767px) {
-    .conact-box__ithem:first-child {
+    margin-bottom: -30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    margin-right: -50px;
+  }
+}
+.conact-box__ithem {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+
+    &:first-child {
       order: 2;
     }
   }
-  @media screen and (min-width: 1200px) {
-    margin-left: auto;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .conact-box__ithem-indent-right:not(:last-child) {
+  @media screen and (min-width: 1200px) {
     margin-right: 50px;
   }
 }

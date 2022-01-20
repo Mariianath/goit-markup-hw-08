@@ -1,27 +1,28 @@
 .feature-container {
   padding-top: 94px;
+  padding-bottom: 94px;
   &__box {
     @extend %container;
   }
 }
 
 .feature-list {
-  margin-right: -30px;
+  @media screen and (min-width: 767px) {
+  }
   @media screen and (min-width: 767px) {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
   }
 }
 .feature-list__ithem {
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media screen and (min-width: 767px) {
     width: calc((100% - 2 * 30px) / 2);
     margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   @media screen and (min-width: 1200px) {

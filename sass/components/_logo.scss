@@ -9,7 +9,13 @@
 }
 
 .header-section__site-logo {
-  margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    margin-right: 80px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+
   color: #000000;
 }
 .site-logo__name-accent {

@@ -46,9 +46,15 @@
   border-color: $accent-color;
 }
 .checkbox__title {
-  font-size: 14px;
   margin-bottom: 0;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
+
 .terms {
   text-decoration: underline;
   color: $accent-color;
