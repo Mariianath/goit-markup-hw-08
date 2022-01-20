@@ -1,22 +1,27 @@
 //header
 .conact-box__icon {
-  fill: currentColor;
-  max-width: 16px;
-  max-height: 12px;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    fill: $accent-color;
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
-}
-.conact-box__icon-indent-right {
-  margin-right: 10px;
-}
+  @media screen and (min-width: 1200px) {
+    fill: currentColor;
+    max-width: 16px;
+    max-height: 12px;
 
-.icon-phone {
-  max-width: 10px;
-  max-height: 16px;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+  .conact-box__icon-indent-right {
+    margin-right: 10px;
+  }
+
+  .icon-phone {
+    max-width: 10px;
+    max-height: 16px;
+  }
 }
 ///features
 .feature-list__icon {

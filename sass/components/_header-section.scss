@@ -156,7 +156,18 @@
     color: inherit;
   }
 }
-.socials-box__ithem:not(:last-child) {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  margin-right: 20px;
+.socials-box__ithem {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 10px;
+}
+.socials-box__ithem:not(:last-child):after {
+  content: '';
+  position: absolute;
+  right: -5px;
+
+  height: 22px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }

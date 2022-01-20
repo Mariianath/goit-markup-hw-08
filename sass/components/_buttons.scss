@@ -7,6 +7,7 @@
     display: inline-block;
     background-color: transparent;
     color: inherit;
+    border: none;
   }
   .menu-button .icon-cross {
     display: none;
@@ -17,6 +18,14 @@
 
   .menu-button.is-open .icon-menu {
     display: none;
+  }
+  .menu-button:hover .icon-menu,
+  .menu-button:focus .icon-menu {
+    fill: $accent-color;
+  }
+  .menu-button:hover .icon-cross,
+  .menu-button:focus .icon-cross {
+    fill: $accent-color;
   }
 }
 @media screen and (min-width: 767px) {
