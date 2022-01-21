@@ -104,12 +104,11 @@ address {
 @media screen and (max-width: 767px) {
   .mobile-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 796px;
-    max-height: 750px;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     background-color: #fff;
     -webkit-box-orient: vertical;
@@ -141,8 +140,6 @@ address {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2;
@@ -208,18 +205,12 @@ address {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .navigation-box {
-    margin-right: -50px;
-  }
-}
-
 .navigation-box__ithem {
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
-  .navigation-box__ithem {
+  .navigation-box__ithem:not(:last-child) {
     margin-right: 50px;
   }
 }
@@ -291,7 +282,7 @@ address {
 
 @media screen and (max-width: 767px) {
   .conact-box {
-    margin-bottom: -30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -304,7 +295,7 @@ address {
 
 @media screen and (max-width: 767px) {
   .conact-box__ithem {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
   .conact-box__ithem:first-child {
     -webkit-box-ordinal-group: 3;
@@ -313,8 +304,14 @@ address {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .conact-box__ithem:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .conact-box__ithem {
+  .conact-box__ithem:not(:last-child) {
     margin-right: 50px;
   }
 }
@@ -425,17 +422,18 @@ address {
   color: #fff;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .conact-box__icon {
     display: none;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .conact-box__icon {
     fill: currentColor;
     max-width: 16px;
     max-height: 12px;
+    margin-right: 10px;
   }
   .conact-box__icon:hover, .conact-box__icon:focus {
     color: #2196f3;
@@ -443,11 +441,7 @@ address {
   }
 }
 
-.conact-box__icon .conact-box__icon-indent-right {
-  margin-right: 10px;
-}
-
-.conact-box__icon .icon-phone {
+.icon-phone {
   max-width: 10px;
   max-height: 16px;
 }
@@ -699,34 +693,46 @@ address {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: -30px;
   }
 }
 
 .feature-list__ithem {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 767px) {
   .feature-list__ithem {
     width: calc((100% - 2 * 30px) / 2);
+  }
+  .feature-list__ithem:not(:last-child) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .feature-list__ithem:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .feature-list__ithem {
-    width: 270px;
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1039,18 +1045,6 @@ address {
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .footer__adress-box-indent-right:not(:last-child) {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__adress-box-indent-right:not(:last-child) {
-    margin-right: 70px;
-  }
-}
-
 .adress {
   font-size: 14px;
   line-height: 1.7;
@@ -1182,6 +1176,8 @@ address {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .footer-section:not(:last-child) {
     margin-bottom: 60px;
   }
 }

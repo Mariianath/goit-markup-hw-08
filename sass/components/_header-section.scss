@@ -26,15 +26,14 @@
 
     margin-bottom: -30px;
   }
-  @media screen and (min-width: 768px) {
-    margin-right: -50px;
-  }
 }
 .navigation-box__ithem {
   position: relative;
 
   @media screen and (min-width: 768px) {
-    margin-right: 50px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
   @media screen and (max-width: 768px) {
     margin-bottom: 30px;
@@ -95,7 +94,7 @@
 .conact-box {
   display: flex;
   @media screen and (max-width: 767px) {
-    margin-bottom: -30px;
+    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -105,15 +104,21 @@
 }
 .conact-box__ithem {
   @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 
     &:first-child {
       order: 2;
     }
   }
-
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
   @media screen and (min-width: 1200px) {
-    margin-right: 50px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 

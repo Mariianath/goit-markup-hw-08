@@ -1,27 +1,23 @@
 //header
 .conact-box__icon {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     fill: currentColor;
     max-width: 16px;
     max-height: 12px;
-
+    margin-right: 10px;
     &:hover,
     &:focus {
       color: $accent-color;
       fill: $accent-color;
     }
   }
-  .conact-box__icon-indent-right {
-    margin-right: 10px;
-  }
-
-  .icon-phone {
-    max-width: 10px;
-    max-height: 16px;
-  }
+}
+.icon-phone {
+  max-width: 10px;
+  max-height: 16px;
 }
 ///features
 .feature-list__icon {
