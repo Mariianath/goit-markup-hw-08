@@ -6,7 +6,7 @@
     @extend %container;
   }
 }
-.works-container__box {
+.works-container__box:first-child {
   margin-bottom: 34px;
 }
 .works-navigation {
@@ -35,9 +35,7 @@
   }
 }
 ///works-examples
-.work-projects {
-  @extend %container;
-}
+
 .work-list {
   display: flex;
   flex-wrap: wrap;
