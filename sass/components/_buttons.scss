@@ -3,6 +3,7 @@
   .menu-button {
     position: absolute;
     right: 15px;
+    z-index: 1;
     transform: translateX(-15px);
     display: inline-block;
     background-color: transparent;
