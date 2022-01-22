@@ -1,52 +1,67 @@
 .works-container {
   padding-top: 94px;
   padding-bottom: 94px;
+
   &__box {
     @extend %container;
   }
+}
+.works-container__box {
+  margin-bottom: 34px;
 }
 .works-navigation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-right: -8px;
-  margin-bottom: -15px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 767px) {
+    margin-left: -8px;
+    margin-top: -15px;
+  }
+
+  @media screen and (min-width: 768px) {
     justify-content: center;
   }
 }
 
 .works-navigation__box {
-  margin-right: 8px;
-  margin-bottom: 15px;
+  @media screen and (max-width: 767px) {
+    margin-left: 8px;
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
 }
 ///works-examples
+.work-projects {
+  @extend %container;
+}
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 1199px) {
-    margin-bottom: -30px;
-  }
+
   @media screen and (min-width: 768px) {
-    margin-right: -30px;
+    margin-top: -30px;
+    margin-left: -30px;
   }
 }
-.work-list-indent-up {
-  margin-top: 34px;
-}
+
 .work-list__ithem {
   @media screen and (max-width: 767px) {
     width: 100%;
-  }
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   @media screen and (min-width: 768px) {
-    margin-right: 30px;
     width: calc((100% - 2 * 30px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
   }
   @media screen and (min-width: 1200px) {
-    width: 370px;
+    width: calc((100% - 3 * 30px) / 3);
   }
 }
 
